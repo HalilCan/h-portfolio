@@ -14,6 +14,11 @@ body {
   }
 }
 
+p {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
 .pagination {
   margin-bottom: 15px;
 }
