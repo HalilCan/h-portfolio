@@ -22,3 +22,8 @@ p {
 .pagination {
   margin-bottom: 15px;
 }
+
+.portfolio-image {
+  display: inline-block;
+  height: 300px;
+}
