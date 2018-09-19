@@ -8,6 +8,15 @@ body {
   padding-top: 54px;
 }
 
+.css-display {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 56px;

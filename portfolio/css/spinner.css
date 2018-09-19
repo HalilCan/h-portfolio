@@ -1,0 +1,40 @@
+#gradient-spinner {
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+#gradient-spinner :before {
+    border-radius: 50%;
+    content: "";
+    clip-path: inset(0% 50% 0% 0%);
+    animation: spin 1s linear infinite;
+    width: 200px;
+    height: 200px;
+    top: -5px;
+    left: -5px;
+    position: absolute;
+    z-index: -1;
+    padding: 5px;
+}
+
+@keyframes spin {
+    0% {
+        background-image: linear-gradient(to bottom, #fca785 0%, #85fca7 100%);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        background-image: linear-gradient(to bottom, #fca785 0%, #85fca7 100%);
+        transform: rotate(360deg);
+
+    }
+}
+
