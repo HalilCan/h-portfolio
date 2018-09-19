@@ -6,23 +6,22 @@
     width: 200px;
     background-color: #fff;
     box-sizing: border-box;
-    position: relative;
     text-align: center;
     padding: 20px;
 }
 
-#gradient-spinner :before {
+#gradient-spinner:before {
     border-radius: 50%;
     content: "";
     clip-path: inset(0% 50% 0% 0%);
     animation: spin 1s linear infinite;
-    width: 200px;
-    height: 200px;
-    top: -5px;
-    left: -5px;
+    width: 208px;
+    height: 208px;
+    top: -4px;
+    left: -4px;
     position: absolute;
     z-index: -1;
-    padding: 5px;
+    padding: 4px;
 }
 
 @keyframes spin {
