@@ -2,6 +2,7 @@ function createModal(elm) {
     let modal = document.createElement("div");
     modal.id = elm.style.id + "-modal";
     modal.className = "modal";
+    modal.style.zIndex = "10";
     document.body.appendChild(modal);
 
     let modalContent = document.createElement("div");
@@ -30,9 +31,11 @@ function createModal(elm) {
     modalContent.appendChild(modalBody);
     let modalBodyText = document.createElement("p");
     modalBodyText.className = "modal-body-text";
+    modalBodyText.innerText = elm.getAttribute("data-body-1");
     modalBody.appendChild(modalBodyText);
     let modalBodyText2 = document.createElement("p");
     modalBodyText.className = "modal-body-text-2";
+    modalBodyText.innerText = elm.getAttribute("data-body-2");
     modalBody.appendChild(modalBodyText2);
 
     let modalFooter = document.createElement("div");
