@@ -106,14 +106,6 @@ body {
     justify-content: center;
 }
 
-.css-display {
-    flex: 1;
-    height: 100%;
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
 
 @media (min-width: 992px) {
     body {
