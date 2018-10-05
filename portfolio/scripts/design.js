@@ -14,6 +14,9 @@ function createModal(elm) {
 
     let modalHeader = document.createElement("div");
     modalHeader.className = "modal-header";
+    modalHeader.style.paddingTop = "15px";
+    modalHeader.style.boxShadow = "0 4px 3px -2px gray";
+    modalHeader.style.zIndex = "11";
     modalContent.appendChild(modalHeader);
     let headerText = document.createElement("h2");
     headerText.className = "header-text";
@@ -28,7 +31,7 @@ function createModal(elm) {
     let modalBody = document.createElement("div");
     modalBody.className = "modal-body";
     modalBody.style.backgroundImage = "url('img/" + elm.getAttribute("id") + "-bg.png" + "')";
-    modalBody.style.backgroundColor = "rgba(41, 227, 245, 0.17)";
+    modalBody.style.backgroundColor = "rgb(238, 246, 255)";
     modalContent.appendChild(modalBody);
     let modalBodyText = document.createElement("p");
     modalBodyText.className = "modal-body-text";

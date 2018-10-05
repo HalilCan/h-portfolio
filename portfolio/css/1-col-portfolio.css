@@ -183,7 +183,7 @@ p {
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #bae8f5;
+    background-color: rgb(238, 246, 255);
     color: #292929;
 }
 
@@ -191,6 +191,6 @@ p {
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #bae8f5;
+    background-color: rgb(238, 246, 255);
     color: #292929;
 }
