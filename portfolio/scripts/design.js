@@ -1,21 +1,3 @@
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-<div class="modal-content">
-    <div class="modal-header">
-    <span class="close">&times;</span>
-<h2>Modal Header</h2>
-</div>
-<div class="modal-body">
-    <p>Some text in the Modal Body</p>
-<p>Some other text...</p>
-</div>
-<div class="modal-footer">
-    <h3>Modal Footer</h3>
-</div>
-</div>
-
-</div>
 
 function generateModal(elm) {
     let modal = document.createElement("div");
@@ -40,6 +22,7 @@ function generateModal(elm) {
 
     let modalBody = document.createElement("div");
     modalBody.className = "modal-body";
+    modalBody.style.backgroundImage = "url('/img/" + elm.style.id + "-bg.png" + "')";
     modalContent.appendChild(modalBody);
     let modalBodyText = document.createElement("p");
     modalBodyText.className = "modal-body-text";
@@ -54,7 +37,6 @@ function generateModal(elm) {
     let modalFooterText = document.createElement("h3");
     modalFooterText.className = "modal-footer-text";
     modalFooter.appendChild(modalFooterText);
-
 
 
 }
