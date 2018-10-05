@@ -41,7 +41,6 @@ body {
 .portfolio-row {
     display: flex;
     flex-direction: row;
-    margin-bottom: 10px;
     flex-wrap: nowrap;
     justify-content: center;
 }
