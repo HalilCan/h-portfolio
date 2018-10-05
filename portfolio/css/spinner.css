@@ -37,3 +37,11 @@
     }
 }
 
+/* Barnes Project */
+#barnes {
+    height: 100%;
+    width: 100%;
+    background:url(../img/mission-control.jpg) no-repeat top left;
+    overflow: hidden;
+}
+
