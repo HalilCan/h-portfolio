@@ -32,12 +32,16 @@ body {
     display: flex;
     flex-direction: row;
     padding-left: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portfolio-item {
     flex: 1;
-    padding-right: 10px;
+    margin-right: 10px;
     max-width: 300px;
+    text-align: center;
 }
 
 .css-display {
