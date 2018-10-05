@@ -1,5 +1,4 @@
-
-function generateModal(elm) {
+function createModal(elm) {
     let modal = document.createElement("div");
     modal.id = elm.style.id + "-modal";
     modal.className = "modal";
@@ -15,6 +14,7 @@ function generateModal(elm) {
     let closeButton = document.createElement("span");
     closeButton.className = "close";
     closeButton.value = "&times";
+    closeButton.onclick = () => {modal.style.display = "none";};
     modalHeader.appendChild(closeButton);
     let headerText = document.createElement("h2");
     headerText.className = "header-text";
@@ -22,7 +22,7 @@ function generateModal(elm) {
 
     let modalBody = document.createElement("div");
     modalBody.className = "modal-body";
-    modalBody.style.backgroundImage = "url('/img/" + elm.style.id + "-bg.png" + "')";
+    modalBody.style.backgroundImage = "url('img/" + elm.style.id + "-bg.png" + "')";
     modalContent.appendChild(modalBody);
     let modalBodyText = document.createElement("p");
     modalBodyText.className = "modal-body-text";
@@ -38,5 +38,10 @@ function generateModal(elm) {
     modalFooterText.className = "modal-footer-text";
     modalFooter.appendChild(modalFooterText);
 
+    return modal;
+}
+
+function generateModal(elm) {
+    let modal = createModal(elm);
 
 }
