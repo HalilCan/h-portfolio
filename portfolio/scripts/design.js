@@ -41,7 +41,15 @@ function createModal(elm) {
     return modal;
 }
 
-function generateModal(elm) {
-    let modal = createModal(elm);
+let currentModal;
 
+function generateModal(elm) {
+    currentModal = createModal(elm);
+    currentModal.style.display = "block";
 }
+
+window.onclick = (event) => {
+    if (event.target === currentModal) {
+        currentModal.style.display = "none";
+    }
+};
