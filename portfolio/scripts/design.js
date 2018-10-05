@@ -6,6 +6,9 @@ function createModal(elm) {
 
     let modalContent = document.createElement("div");
     modalContent.className = "modal-content";
+    modalContent.style.width = "80vw";
+    modalContent.style.height = "auto";
+    modalContent.style.minHeight = "400px";
     modal.appendChild(modalContent);
 
     let modalHeader = document.createElement("div");
@@ -18,6 +21,7 @@ function createModal(elm) {
     modalHeader.appendChild(closeButton);
     let headerText = document.createElement("h2");
     headerText.className = "header-text";
+    headerText.innerText = elm.getAttribute("data-header");
     modalHeader.appendChild(headerText);
 
     let modalBody = document.createElement("div");

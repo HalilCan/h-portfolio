@@ -183,14 +183,14 @@ p {
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
+    background-color: #bae8f5;
+    color: #7a7a7a;
 }
 
 .modal-body {padding: 2px 16px;}
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
+    background-color: #bae8f5;
+    color: #7a7a7a;
 }
