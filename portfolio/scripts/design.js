@@ -2,7 +2,7 @@ function createModal(elm) {
     let modal = document.createElement("div");
     modal.id = elm.style.id + "-modal";
     modal.className = "modal";
-    document.appendChild(modal);
+    document.body.appendChild(modal);
 
     let modalContent = document.createElement("div");
     modalContent.className = "modal-content";
