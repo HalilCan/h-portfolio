@@ -30,8 +30,7 @@ function createModal(elm) {
 
     let modalBody = document.createElement("div");
     modalBody.className = "modal-body";
-    modalBody.style.backgroundImage = "url('img/" + elm.getAttribute("id") + "-bg.png" + "')";
-    modalBody.style.backgroundColor = "rgb(238, 246, 255)";
+    /*modalBody.style.backgroundImage = "url('img/" + elm.getAttribute("id") + "-bg.png" + "')";*/
     modalContent.appendChild(modalBody);
     let modalBodyText = document.createElement("p");
     modalBodyText.className = "modal-body-text";
