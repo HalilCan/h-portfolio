@@ -60,7 +60,7 @@ function createModal(elm) {
         newSlide.style.display = "none";
         let numberText = document.createElement("div");
         numberText.className = "number-text";
-        numberText.innerText = i.toString() + "/ 4";
+        numberText.innerText = i.toString() + " / 4";
         newSlide.appendChild(numberText);
 
         let slideImg = document.createElement("img");
