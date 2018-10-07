@@ -109,7 +109,7 @@ function shiftSlides(d) {
     if (currentIndex < 1) {
         currentIndex = slideImages.length;
     }
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1, len = slideImages.length; i < (len + 1); i++) {
         slideImages[i].style.display = "none";
         if (i === currentIndex) {
             slideImages[i].style.display = "block";
