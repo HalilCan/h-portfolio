@@ -115,7 +115,4 @@ function shiftSlides(d) {
             slideImages[i].style.display = "block";
         }
     }
-
-    slideImg.className = "slide-img";
-    slideImg.style.id = elm.getAttribute("id") + "-img-" + i.toString();
 }
