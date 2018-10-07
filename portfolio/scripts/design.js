@@ -41,6 +41,30 @@ function createModal(elm) {
     modalBodyText2.innerText = elm.getAttribute("data-body-2");
     modalBody.appendChild(modalBodyText2);
 
+    let modalLightBox = document.createElement("div");
+    modalLightBox.className = "lightbox-content";
+    modalBody.appendChild(modalLightBox);
+    // Slides
+    for (let i = 1; i < 5; i++) {
+        let newSlide = document.createElement("div");
+        newSlide.className = "slides"
+        let numberText = document.createElement("div");
+        numberText.className = "number-text";
+        numberText.innerText = i.toString() + "/ 4";
+        newSlide.appendChild(numberText);
+
+        let slideImg = document.createElement("div");
+        slideImg.className = "slide-img";
+        slideImg.style.id = elm.getAttribute("id") + "-img-" + i.toString();
+        slideImg.innerText = i.toString() + "/ 4";
+        slideImg.style.width = "100%";
+        slideImg.src = elm.getAttribute("id") + "-img-" + i.toString() + ".png";
+        newSlide.appendChild(slideImg);
+
+        modalBody.appendChild(newSlide);
+    }
+    // Arrow buttons
+
     let modalFooter = document.createElement("div");
     modalFooter.className = "modal-footer";
     modalContent.appendChild(modalFooter);
