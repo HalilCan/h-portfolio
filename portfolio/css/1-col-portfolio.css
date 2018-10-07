@@ -206,8 +206,17 @@ p {
 }
 
 .slides {
+    max-width: 700px;
+    border: 1px solid rgba(138, 167, 255, 0.35);
+    border-radius: 4px;
     margin-top: 10px;
     display: none;
+}
+
+.slide-img {
+    margin-left: auto;
+    align-content: center;
+    text-align: center;
 }
 
 .prev-arr, .next-arr {
@@ -217,7 +226,7 @@ p {
     width: auto;
     padding: 16px;
     color: #636363;
-    margin-top: 50px;
+    margin-top: 10px;
     font-weight: bold;
     font-size: 20px;
     transition: 0.4s ease;

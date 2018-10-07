@@ -58,6 +58,7 @@ function createModal(elm) {
         let newSlide = document.createElement("div");
         newSlide.className = "slides";
         newSlide.style.display = "none";
+        newSlide.style.flex = "1";
         let numberText = document.createElement("div");
         numberText.className = "number-text";
         numberText.innerText = i.toString() + " / 4";
