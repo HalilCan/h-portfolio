@@ -67,12 +67,16 @@ function createModal(elm) {
     // Arrow buttons
     let leftArrow = document.createElement("a");
     leftArrow.className = "prev-arr";
-    leftArrow.onclick = shiftSlide(-1);
+    leftArrow.onclick = () => {
+        shiftSlides(-1);
+    };
     leftArrow.innerHTMl = "&#10094";
 
     let rightArrow = document.createElement("a");
     rightArrow.className = "next-arr";
-    rightArrow.onclick = shiftSlide(1);
+    rightArrow.onclick = () => {
+        shiftSlides(1);
+    };
     rightArrow.innerHTMl = "&#10094";
 
     let modalFooter = document.createElement("div");
