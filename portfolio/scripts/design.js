@@ -25,7 +25,9 @@ function createModal(elm) {
     let closeButton = document.createElement("span");
     closeButton.className = "close";
     closeButton.innerHTML = "&times";
-    closeButton.onclick = () => {modal.style.display = "none";};
+    closeButton.onclick = () => {
+        modal.style.display = "none";
+    };
     modalHeader.appendChild(closeButton);
 
     let modalBody = document.createElement("div");
@@ -47,7 +49,7 @@ function createModal(elm) {
     // Slides
     for (let i = 1; i < 5; i++) {
         let newSlide = document.createElement("div");
-        newSlide.className = "slides"
+        newSlide.className = "slides";
         let numberText = document.createElement("div");
         numberText.className = "number-text";
         numberText.innerText = i.toString() + "/ 4";
@@ -64,6 +66,15 @@ function createModal(elm) {
         modalBody.appendChild(newSlide);
     }
     // Arrow buttons
+    let leftArrow = document.createElement("a");
+    leftArrow.className = "prev-arr";
+    leftArrow.onclick = shiftSlide(-1);
+    leftArrow.innerHTMl = "&#10094";
+
+    let rightArrow = document.createElement("a");
+    rightArrow.className = "next-arr";
+    rightArrow.onclick = shiftSlide(1);
+    rightArrow.innerHTMl = "&#10094";
 
     let modalFooter = document.createElement("div");
     modalFooter.className = "modal-footer";
