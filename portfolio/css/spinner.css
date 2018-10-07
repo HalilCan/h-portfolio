@@ -37,42 +37,6 @@
     }
 }
 
-/* Light-box */
-.slides {
-    display: none;
-}
-
-.prev-arr, .next-arr {
-    cursor: pointer;
-    position: relative;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: #636363;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.4s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next-arr {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.next-arr:hover, .prev-arr:hover {
-    color: black;
-}
-
-.number-text {
-    color: #636363;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
 
 /* Barnes Project */
 #barnes {

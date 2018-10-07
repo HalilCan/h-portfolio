@@ -1,4 +1,9 @@
 function createModal(elm) {
+    if (document.getElementsByClassName("modal") !== undefined) {
+        for (let elem of document.getElementsByClassName("modal")) {
+            elem.innerHTML = "";
+        }
+    }
     let modal = document.createElement("div");
     modal.id = elm.getAttribute("id") + "-modal";
     modal.className = "modal";
@@ -44,23 +49,26 @@ function createModal(elm) {
     modalBody.appendChild(modalBodyText2);
 
     let modalLightBox = document.createElement("div");
+    modalLightBox.style.zIndex = 11;
     modalLightBox.className = "lightbox-content";
+    modalLightBox.style.id = "lightbox-content";
     modalBody.appendChild(modalLightBox);
     // Slides
     for (let i = 1; i < 5; i++) {
         let newSlide = document.createElement("div");
         newSlide.className = "slides";
+        newSlide.style.display = "none";
         let numberText = document.createElement("div");
         numberText.className = "number-text";
         numberText.innerText = i.toString() + "/ 4";
         newSlide.appendChild(numberText);
 
-        let slideImg = document.createElement("div");
+        let slideImg = document.createElement("img");
         slideImg.className = "slide-img";
         slideImg.style.id = elm.getAttribute("id") + "-img-" + i.toString();
         slideImg.style.width = "100%";
         slideImg.style.height = "auto";
-        slideImg.src = elm.getAttribute("id") + "-img-" + i.toString() + ".png";
+        slideImg.src = "./img/" + elm.getAttribute("id") + "-img-" + i.toString() + ".png";
         newSlide.appendChild(slideImg);
 
         modalLightBox.appendChild(newSlide);
@@ -71,7 +79,7 @@ function createModal(elm) {
     leftArrow.onclick = () => {
         shiftSlides(-1);
     };
-    leftArrow.innerHTMl = "&#10094";
+    leftArrow.innerText = "<";
     modalLightBox.appendChild(leftArrow);
 
     let rightArrow = document.createElement("a");
@@ -79,7 +87,7 @@ function createModal(elm) {
     rightArrow.onclick = () => {
         shiftSlides(1);
     };
-    rightArrow.innerHTMl = "&#10094";
+    rightArrow.innerText = ">";
     modalLightBox.appendChild(rightArrow);
 
     let modalFooter = document.createElement("div");
@@ -97,6 +105,7 @@ let currentModal;
 function generateModal(elm) {
     currentModal = createModal(elm);
     currentModal.style.display = "block";
+    shiftSlides(1);
 }
 
 window.onclick = (event) => {
@@ -105,10 +114,10 @@ window.onclick = (event) => {
     }
 };
 
-let currentIndex = 1;
+let currentIndex = 0;
 
 function shiftSlides(d) {
-    let slideImages = document.getElementsByClassName("slide-img");
+    let slideImages = document.getElementsByClassName("slides");
     currentIndex += d;
     if (currentIndex > slideImages.length) {
         currentIndex = 1;
@@ -117,9 +126,12 @@ function shiftSlides(d) {
         currentIndex = slideImages.length;
     }
     for (let i = 1, len = slideImages.length; i < (len + 1); i++) {
-        slideImages[i].style.display = "none";
+        console.log(i, currentIndex);
+        if (i !== currentIndex) {
+            slideImages[i - 1].style.display = "none";
+        }
         if (i === currentIndex) {
-            slideImages[i].style.display = "block";
+            slideImages[i - 1].style.display = "block";
         }
     }
 }

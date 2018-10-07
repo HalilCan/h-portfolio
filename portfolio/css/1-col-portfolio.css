@@ -131,7 +131,8 @@ p {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 20px; /* Location of the box */
+    padding-bottom: 50px;
     left: 0;
     top: 0;
     border-radius: 4px;
@@ -194,4 +195,54 @@ p {
     padding: 2px 16px;
     background-color: rgb(238, 246, 255);
     color: #292929;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+
+/* Light-box */
+.modal-content {
+    max-width: 700px;
+}
+
+.slides {
+    margin-top: 10px;
+    display: none;
+}
+
+.prev-arr, .next-arr {
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #636363;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.4s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev-arr {
+    float: left;
+}
+
+.next-arr {
+    float: right;
+}
+
+.next-arr:hover, .prev-arr:hover {
+    color: black;
+}
+
+.number-text {
+    color: #636363;
+    font-size: 12px;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 13px;
 }
