@@ -63,7 +63,15 @@
 }
 
 .next-arr:hover, .prev-arr:hover {
+    color: black;
+}
 
+.number-text {
+    color: #636363;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 /* Barnes Project */

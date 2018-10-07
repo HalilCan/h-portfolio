@@ -58,7 +58,6 @@ function createModal(elm) {
         let slideImg = document.createElement("div");
         slideImg.className = "slide-img";
         slideImg.style.id = elm.getAttribute("id") + "-img-" + i.toString();
-        slideImg.innerText = i.toString() + "/ 4";
         slideImg.style.width = "100%";
         slideImg.src = elm.getAttribute("id") + "-img-" + i.toString() + ".png";
         newSlide.appendChild(slideImg);
@@ -98,3 +97,15 @@ window.onclick = (event) => {
         currentModal.style.display = "none";
     }
 };
+
+function shiftSlides(d) {
+    let slideImages = document.getElementsByClassName("slide-img");
+    if (d > slideImages.length) {
+        d = 1;
+    }
+    if (d < 1) {
+        d = slideImages.length;
+    }
+    slideImg.className = "slide-img";
+    slideImg.style.id = elm.getAttribute("id") + "-img-" + i.toString();
+}
