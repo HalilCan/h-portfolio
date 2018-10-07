@@ -98,14 +98,23 @@ window.onclick = (event) => {
     }
 };
 
+let currentIndex = 1;
+
 function shiftSlides(d) {
     let slideImages = document.getElementsByClassName("slide-img");
-    if (d > slideImages.length) {
-        d = 1;
+    currentIndex += d;
+    if (currentIndex > slideImages.length) {
+        currentIndex = 1;
     }
-    if (d < 1) {
-        d = slideImages.length;
+    if (currentIndex < 1) {
+        currentIndex = slideImages.length;
     }
+    for (let i = 1; i < 5; i++) {
+        if (d) {
+
+        }
+    }
+
     slideImg.className = "slide-img";
     slideImg.style.id = elm.getAttribute("id") + "-img-" + i.toString();
 }
