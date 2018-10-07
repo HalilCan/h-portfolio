@@ -59,10 +59,11 @@ function createModal(elm) {
         slideImg.className = "slide-img";
         slideImg.style.id = elm.getAttribute("id") + "-img-" + i.toString();
         slideImg.style.width = "100%";
+        slideImg.style.height = "auto";
         slideImg.src = elm.getAttribute("id") + "-img-" + i.toString() + ".png";
         newSlide.appendChild(slideImg);
 
-        modalBody.appendChild(newSlide);
+        modalLightBox.appendChild(newSlide);
     }
     // Arrow buttons
     let leftArrow = document.createElement("a");
@@ -71,6 +72,7 @@ function createModal(elm) {
         shiftSlides(-1);
     };
     leftArrow.innerHTMl = "&#10094";
+    modalLightBox.appendChild(leftArrow);
 
     let rightArrow = document.createElement("a");
     rightArrow.className = "next-arr";
@@ -78,6 +80,7 @@ function createModal(elm) {
         shiftSlides(1);
     };
     rightArrow.innerHTMl = "&#10094";
+    modalLightBox.appendChild(rightArrow);
 
     let modalFooter = document.createElement("div");
     modalFooter.className = "modal-footer";
